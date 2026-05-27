@@ -1,0 +1,55 @@
+# =========================
+# Environnements Python
+# =========================
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# =========================
+# Jupyter Notebook
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# Données (IMPORTANT)
+# =========================
+data/raw/
+data/processed/*.csv
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# =========================
+# Modèles entraînés
+# =========================
+results/
+*.pkl
+*.joblib
+*.pt
+*.pth
+
+# =========================
+# Logs / outputs
+# =========================
+logs/
+*.log
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# IDE / VS Code
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# Hugging / ML cache
+# =========================
+.cache/

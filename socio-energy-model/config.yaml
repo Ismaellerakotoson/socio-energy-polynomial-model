@@ -1,0 +1,24 @@
+# PJME — régression polynomiale (prévision énergétique)
+
+paths:
+  train_csv: data/processed/train_with_features.csv
+  val_csv: data/processed/val_with_features.csv
+  test_csv: data/processed/test_with_features.csv
+  model_dir: results/models
+  outputs_dir: results/predictions
+
+model:
+  name: polynomial_regression
+  degree: 3   # degré du polynôme (à ajuster)
+  features:
+    - hour
+    - dayofweek
+    - month
+
+target: load_MW
+
+training:
+  test_size: 0.2
+  random_state: 42
+
+device: cpu
