@@ -1,0 +1,16 @@
+# Fichiers générés
+results/predictions/rapport.html
+results/predictions/*.html
+
+# Modèles entraînés (souvent lourds)
+results/models/*.pkl
+
+# Données (souvent trop lourdes pour Git)
+data/raw/*.csv
+data/processed/*.csv
+
+# Environnements
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
