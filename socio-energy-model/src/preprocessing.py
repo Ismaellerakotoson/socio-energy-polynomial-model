@@ -1,5 +1,7 @@
 from pathlib import Path
 import pandas as pd
+from feature_engineering import add_calendar_features
+
 
 def main():
     root = Path(__file__).resolve().parent.parent
@@ -18,12 +20,9 @@ def main():
     df = df.sort_values("Datetime").reset_index(drop=True)
 
     # -------------------------
-    # 2. Feature engineering
+    # 2. Feature engineering (CENTRALISÉ)
     # -------------------------
-    df["hour"] = df["Datetime"].dt.hour
-    df["dow"] = df["Datetime"].dt.dayofweek
-    df["month"] = df["Datetime"].dt.month
-    df["is_weekend"] = (df["dow"] >= 5).astype(int)
+    df = add_calendar_features(df, datetime_col="Datetime")
 
     # -------------------------
     # 3. Sauvegarde
