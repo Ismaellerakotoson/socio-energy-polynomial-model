@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Socio-Energy Report</title>
+
+<style>
+body {
+    font-family: Arial;
+    margin: 40px;
+    background: #f4f4f4;
+}
+
+h1 {
+    color: #222;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+img {
+    max-width: 100%;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Socio-Energy Forecast Report</h1>
+
+<div class="card">
+    <h2>Dataset</h2>
+    <p><b>Rows:</b> 145199</p>
+    <p><b>Columns:</b> 10</p>
+</div>
+
+<div class="card">
+    <h2>Model Performance</h2>
+    <p>MAE: 3909.61</p>
+    <p>RMSE: 4917.84</p>
+    <p>R²: 0.4216</p>
+</div>
+
+<div class="card">
+    <h2>Features Used</h2>
+    <ul>
+        <li>hour</li><li>dow</li><li>month</li>
+    </ul>
+</div>
+
+<div class="card">
+    <h2>Actual vs Predicted</h2>
+    <img src="plots/actual_vs_predicted.png">
+</div>
+
+<div class="card">
+    <h2>Error Distribution</h2>
+    <img src="plots/error_distribution.png">
+</div>
+
+<div class="card">
+    <h2>Hourly Pattern</h2>
+    <img src="plots/hourly_consumption.png">
+</div>
+
+<div class="card">
+    <h2>Model File</h2>
+    <p>C:\Users\ISMAELLE\Downloads\socio-energy-polynomial-model\results\models\polynomial_model.pkl</p>
+</div>
+
+</body>
+</html>

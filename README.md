@@ -161,7 +161,7 @@ Exécuter les étapes dans l'ordre suivant :
 ### Étape 1 — Analyse exploratoire (EDA)
 
 ```bash
-jupyter notebook energy_forecast/notebooks/01_eda_pjm_hourly_load.ipynb
+jupyter notebook socio-energy-model/notebooks/01_eda_pjm_hourly_load.ipynb
 ```
 
 > Charge le CSV brut, inspecte les types, détecte les valeurs manquantes, gère les doublons DST, puis sauvegarde un fichier propre dans `data/processed/`.
@@ -171,7 +171,7 @@ jupyter notebook energy_forecast/notebooks/01_eda_pjm_hourly_load.ipynb
 ### Étape 2 — Feature engineering & prétraitement
 
 ```bash
-python energy_forecast/src/preprocessing.py --all
+python socio-energy-model/src/preprocessing.py --all
 ```
 
 > Appelle `feature_engineering.py` pour générer les features calendaires (heure, jour, mois, weekend, lags, moyennes mobiles) et exporte `PJME_hourly_with_features.csv`.
